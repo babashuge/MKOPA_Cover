@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:background="@drawable/light_bg"
+    android:weightSum="4">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+
+        android:paddingHorizontal="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/account_productimage"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/phone_3"
+
+            />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center_vertical">
+            <TextView
+                android:id="@+id/account_productname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/account_productname"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+
+
+                />
+            <TextView
+                android:id="@+id/account_productstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/yellow"
+                android:paddingHorizontal="5dp"
+
+
+                android:text="@string/account_paystatus_active"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="4dp"
+                android:layout_gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/account_productprogresstitle"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    />
+
+                <ProgressBar
+                    android:id="@+id/account_productprogress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:scaleY="2"
+                    android:progressTint="@color/purple_500"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+
+
+        android:backgroundTint="@color/light_grey">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_details"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/purple_500"
+                android:padding="2dp"
+
+                android:layout_marginStart="20dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:paddingVertical="10dp">
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/bg_white"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="2"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/account_productbalancetitle"
+                        android:textColor="@color/black"
+                        android:textSize="11sp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+
+                        />
+                    <TextView
+                        android:id="@+id/account_productbalance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/item_dailypay"
+                        android:textColor="@color/purple_500"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+
+                        />
+                </LinearLayout>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/purple_500"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="2"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/account_nextpaytitle"
+                        android:textColor="@color/black"
+                        android:textSize="11sp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/account_productnextamnt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/account_productinstallments"
+                        android:textColor="@color/purple_500"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+
+                        />
+                </LinearLayout>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/purple_500"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="2"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/account_deadlinetitle"
+                        android:textColor="@color/black"
+                        android:textSize="11sp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/account_productnextpay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/account_productnextpayin"
+                        android:textAlignment="center"
+                        android:textColor="@color/purple_500"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+
+                        />
+                </LinearLayout>
+
+
+
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:paddingVertical="10dp">
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/bg_white"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="2"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/account_productcosttitle"
+                        android:textColor="@color/black"
+                        android:textSize="11sp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+
+                        />
+                    <TextView
+                        android:id="@+id/account_productloan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/account_productcost"
+                        android:textColor="@color/purple_500"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+
+                        />
+                </LinearLayout>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/purple_500"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="2"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/account_lastamounttitle"
+                        android:textColor="@color/black"
+                        android:textSize="11sp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/account_productlastamnt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/account_lastamount"
+                        android:textColor="@color/purple_500"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+
+                        />
+                </LinearLayout>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/purple_500"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="2"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/account_lastpaytitle"
+                        android:textColor="@color/black"
+                        android:textSize="11sp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/account_productlastpaydate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/account_lastpaydate"
+                        android:textAlignment="center"
+                        android:textColor="@color/purple_500"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+
+                        />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/account_payButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_pay"
+        android:padding="20dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/black"
+        />
+
+
+
+
+
+
+</LinearLayout>
+
+

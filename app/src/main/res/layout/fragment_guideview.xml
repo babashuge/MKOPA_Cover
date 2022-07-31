@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/howtos_action_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_howtoaction"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/black"
+        android:padding="20dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_alignParentBottom="true"
+        android:translationY="-20dp"
+        >
+
+    </Button>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <ImageView
+        android:id="@+id/guide_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+
+        android:scrollbars="vertical"
+        android:src="@drawable/how_to_pay_locked_nokia_full"/>
+</ScrollView>
+</RelativeLayout>
+
+
+
+    <!--    <com.github.barteksc.pdfviewer.PDFView-->
+<!--        android:id="@+id/pdfView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+

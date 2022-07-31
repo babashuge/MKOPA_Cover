@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.products.ProductsFragment">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/light_bg">
+
+
+        <TextView
+            android:layout_marginTop="60dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="15dp"
+            android:text="@string/howto_title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_500"/>
+
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/howto_search_bg"
+            android:id="@+id/search_howto"
+            android:queryHint="@string/howto_searchbar"
+            android:iconifiedByDefault="false"
+
+
+            >
+
+
+        </SearchView>
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/howto_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:paddingHorizontal="20dp"
+
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/howto_item"/>
+        <!--            android:background="@color/bg_white"-->
+        />
+
+    </LinearLayout>
+</FrameLayout>

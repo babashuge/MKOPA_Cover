@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.mkopaapp.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+
+
+        <action
+            android:id="@+id/action_nav_home_to_nav_account"
+            app:destination="@id/nav_account" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_howto"
+            app:destination="@id/nav_howto" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_products"
+            app:destination="@id/nav_products" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_pay"
+            app:destination="@id/nav_pay" />
+
+        <action
+            android:id="@+id/action_nav_home_to_nav_servcenters"
+            app:destination="@id/nav_servcenters" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_contact"
+            app:destination="@id/nav_contact" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_pay"
+        android:name="com.example.mkopaapp.ui.payments.PaymentsFragment"
+        android:label="@string/menu_pay"
+        tools:layout="@layout/fragment_pay_selectdevice">
+        <action
+            android:id="@+id/action_nav_pay_to_nav_paymentsform"
+            app:destination="@id/nav_paymentsform" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_paymentsform"
+        android:name="com.example.mkopaapp.ui.payments.PaymentsformFragment"
+        android:label="@string/details_title"
+        tools:layout="@layout/fragment_pay_form">
+        <argument
+            android:name="arg_accountproduct_name"
+            app:argType="string" />
+        <argument
+            android:name="arg_accountproduct_progress"
+            app:argType="integer" />
+        <argument
+            android:name="arg_accountproduct_status"
+            app:argType="string" />
+        <argument
+            android:name="arg_accountproduct_nextamnt"
+            app:argType="string" />
+
+        <argument
+            android:name="arg_accountproduct_image"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_nav_paymentsform_to_nav_payments_processing"
+            app:destination="@id/nav_payments_processing" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_howto"
+        android:name="com.example.mkopaapp.ui.howto.HowtoFragment"
+        android:label="@string/menu_how_to"
+        tools:layout="@layout/fragment_howto">
+        <action
+            android:id="@+id/action_nav_howto_to_nav_guideview"
+            app:destination="@id/nav_guideview" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_appsettings"
+        android:name="com.example.mkopaapp.ui.appsettings.AppsettingsFragment"
+        android:label="@string/menu_appsettings"
+        tools:layout="@layout/fragment_appsettings" />
+
+    <fragment
+        android:id="@+id/nav_products"
+        android:name="com.example.mkopaapp.ui.products.ProductsFragment"
+        android:label="@string/menu_products"
+        tools:layout="@layout/fragment_products" >
+        <action
+            android:id="@+id/action_nav_products_to_nav_prodItemDetails"
+            app:destination="@id/nav_prodItemDetails" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_changelang"
+        android:name="com.example.mkopaapp.ui.languages.LanguagesFragment"
+        android:label="@string/menu_langs"
+        tools:layout="@layout/fragment_langs" >
+        <action
+            android:id="@+id/action_nav_changelang_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_account"
+        android:name="com.example.mkopaapp.ui.myAccount.MyaccountFragment"
+        android:label="@string/menu_account"
+        tools:layout="@layout/fragment_myaccount" >
+        <action
+            android:id="@+id/action_nav_account_to_nav_itemdetails"
+            app:destination="@id/nav_accountitemdetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_prodItemDetails"
+        android:name="com.example.mkopaapp.ui.products.ProductitemFragment"
+        android:label="@string/details_title"
+        tools:layout="@layout/fragment_productitemdetails">
+        <argument
+            android:name="arg_phoneselection"
+            app:argType="integer" />
+        <argument
+            android:name="arg_phonename"
+            app:argType="string" />
+        <argument
+            android:name="arg_phonecost"
+            app:argType="string" />
+        <argument
+            android:name="arg_dailypay"
+            app:argType="string" />
+        <argument android:name="arg_phoneimage"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_contact"
+        android:name="com.example.mkopaapp.ui.contactus.ContactusFragment"
+        android:label="@string/menu_contactus"
+        tools:layout="@layout/fragment_contactus">
+        <action
+            android:id="@+id/action_nav_contact_to_nav_chatpage"
+            app:destination="@id/nav_chatpage" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_servcenters"
+        android:name="com.example.mkopaapp.ui.servcenters.ServcentersFragment"
+        android:label="@string/menu_servcenters"
+        tools:layout="@layout/fragment_servcenters"/>
+    <fragment
+        android:id="@+id/nav_payments_processing"
+        android:name="com.example.mkopaapp.ui.payments.PaymentsprocessingFragment"
+        android:label="@string/menu_servcenters"
+        tools:layout="@layout/fragment_pay_processing">
+        <action
+            android:id="@+id/action_nav_payments_processing_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_accountitemdetails"
+        android:name="com.example.mkopaapp.ui.myAccount.AccountproductFragment"
+        android:label="@string/details_title"
+        tools:layout="@layout/fragment_accountitemdetails">
+        <argument
+            android:name="arg_accountproduct_name"
+            app:argType="string" />
+        <argument
+            android:name="arg_accountproduct_progress"
+            app:argType="integer" />
+        <argument
+            android:name="arg_accountproduct_status"
+            app:argType="string" />
+        <argument
+            android:name="arg_accountproduct_nextamnt"
+            app:argType="string" />
+        <argument
+            android:name="arg_accountproduct_nextdate"
+            app:argType="string" />
+        <argument
+            android:name="arg_accountproduct_image"
+            app:argType="integer" />
+        <argument
+            android:name="arg_accountproduct_selection"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_nav_accountitemdetails_to_nav_paymentsform"
+            app:destination="@id/nav_paymentsform" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_guideview"
+        android:name="com.example.mkopaapp.ui.howto.GuideviewFragment"
+
+        tools:layout="@layout/fragment_guideview">
+        <argument
+            android:name="arg_guideView"
+            app:argType="integer"
+
+            />
+        <argument
+            android:name="arg_guideToast"
+            app:argType="string"
+
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_chatpage"
+        android:name="com.example.mkopaapp.ui.contactus.ChatpageFragment"
+        android:label="@string/menu_chat"
+        tools:layout="@layout/fragment_chatpage">
+        <action
+            android:id="@+id/action_nav_chatpage_to_nav_guideview"
+            app:destination="@id/nav_guideview" />
+        <action
+            android:id="@+id/action_nav_chatpage_to_nav_servcenters"
+            app:destination="@id/nav_servcenters" />
+    </fragment>
+
+
+
+
+
+</navigation>

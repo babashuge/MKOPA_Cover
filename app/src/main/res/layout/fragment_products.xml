@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.products.ProductsFragment">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/light_bg"
+
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp">
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/productspage_icon"
+                android:scaleType="centerCrop"
+
+            />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/phone_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:paddingHorizontal="5dp"
+
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/fragment_phoneitem"/>
+<!--            android:background="@color/bg_white"-->
+            />
+
+    </LinearLayout>
+</FrameLayout>

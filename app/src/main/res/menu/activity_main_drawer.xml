@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Home"/>
+
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="My Account"/>
+        <item
+            android:id="@+id/nav_products"
+            android:icon="@drawable/ic_baseline_phone_android_24"
+            android:title="Our Products"/>
+
+        <item
+            android:id="@+id/nav_pay"
+            android:icon="@drawable/ic_baseline_account_balance_wallet_24"
+            android:title="Make Payment"/>
+        <item
+            android:id="@+id/nav_howto"
+            android:icon="@drawable/ic_baseline_help_outline_24"
+            android:title="How-to Guides"/>
+
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/ic_baseline_support_agent_24"
+            android:title="Contact Us"/>
+        <item
+            android:id="@+id/nav_servcenters"
+            android:icon="@drawable/ic_baseline_location_on_24"
+            android:title="Find nearest agent"/>
+
+        <item
+            android:title="Settings">
+        <menu>
+            <item
+                android:id="@+id/nav_appsettings"
+                android:icon="@drawable/ic_baseline_settings_24"
+                android:title="App Settings"/>
+
+            <item
+                android:id="@+id/nav_changelang"
+                android:icon="@drawable/ic_baseline_language_24"
+                android:title="Change Language"/>
+        </menu>
+        </item>
+    </group>
+</menu>
